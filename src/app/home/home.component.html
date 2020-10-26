@@ -1,0 +1,20 @@
+<h1>Usuários</h1>
+
+<div>
+    <p>Pesquisar usuário</p>
+    <input type="text" placeholder="Digite o nome ou email" [(ngModel)]="texto">
+    <p>{{texto}}</p>
+    <button (click)="searchUser()">pesquisar</button>
+</div>
+<table>
+    <thead>
+        <th>Nome</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>{{usuario['Name']}}</td>
+            <td>{{usuario['Email']}}</td>
+        </tr>
+    </tbody>
+</table>
